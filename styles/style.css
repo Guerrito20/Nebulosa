@@ -1,0 +1,566 @@
+/* Configurações básicas e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+     font-family: "Inter", sans-serif; /* Fonte principal */
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------- */
+/*       CABEÇALHO (HEADER) */
+/* ---------------------------------- */
+.header {
+    background-color: #000;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   
+
+    position: sticky; 
+    top: 0;         
+    z-index: 1000;
+    opacity: 0.9;
+  
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0px;
+      
+    color: #e7eaee; 
+     text-shadow: 5px 4px 6px rgba(211, 8, 230, 0.9);
+     font-family: 'Times New Roman', Times, serif;
+     
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+    opacity: 0.8;
+}
+
+.nav-link:hover {
+    color: #a020f0; /* Cor roxa ao passar o mouse */
+    opacity: 1;
+}
+
+/*  página ativa */
+.nav-link.active { 
+    color: #a020f0; /* Cor roxa*/
+    font-weight: 600;
+    opacity: 1;
+}
+
+
+
+
+/* ---------------------------------- */
+/* SEÇÃO HERO / BANNER PRINCIPAL */
+/* ---------------------------------- */
+.hero-section {
+    position: relative;
+    height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha à esquerda */
+    padding-left: 10%; 
+    overflow: hidden;
+    color: #fff;
+    text-align: left;
+    
+    
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1; /* Coloca o vídeo atrás de tudo */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    object-fit: cover; /* Garante que o vídeo cubra toda a área  */
+}
+
+.hero-section::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.9) 35%, 
+        rgba(165, 37, 245, 0.4) 65%,
+        rgba(164, 25, 199, 0.7) 100%);
+    z-index: 1;
+    content: "";
+}
+
+
+
+.hero-content {
+position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%);
+    
+    z-index: 3; 
+    color: #fff;
+    
+ 
+    left: 10%; /* Ajuste a esquerda */
+    right: auto;
+    
+    text-align: left; 
+    max-width: 550px; /* Limita a largura do texto */
+}
+    
+
+
+    .hero-content a.btn {
+    /* Garante que os botões sejam tratados como blocos flex */
+    display: block; 
+    padding: 12px 25px; 
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.hero-buttons {
+    display: flex; /* Faz os botões ficarem lado a lado */
+    gap: 15px; /* Adiciona um espaço entre os botões */
+    margin-top: 30px; 
+    
+    width: max-content; 
+}
+
+
+
+.hero-content h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 5px 4px 6px rgba(211, 8, 230, 0.9);
+}
+
+.hero-content p {
+    
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    line-height: 2rem;
+    color:rgb(166, 166, 166);
+    opacity: 0.9;
+    display: block;
+    height: 64px;
+    width: 768px;
+    overflow: hidden;
+    
+   
+
+
+    
+}
+
+/* Botões */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap; 
+}
+
+
+
+
+
+
+/* ---------------------------------- */
+/* SEÇÃO NOSSOS SERVIÇOS */
+/* ---------------------------------- */
+.services-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.services-section h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services-section p {
+    font-size: 16px;
+    color: #aaa;
+}
+
+
+
+.btn-primary-outline {
+    background-color: transparent; 
+    color: #a020f0; /* Cor do texto roxo */
+    border: 2px solid #a020f0;
+}
+
+
+.btn-primary-outline:hover {
+   
+    background-color: #a020f0; 
+    color: #fff; 
+    border-color: #a020f0; 
+    box-shadow: 0 0 10px rgba(160, 32, 240, 0.7); 
+}
+
+
+
+
+.btn-primary {
+    background-color: #a020f0; 
+    color: #fff;
+    border: 2px solid #a020f0;
+
+}
+
+.btn-primary:hover {
+    background-color: #8a1be2;
+    border-color: #8a1be2;
+}
+
+.btn-secondary {
+    background-color: #a020f0 ;
+    border: 2px solid #a020f0;
+    color: #fff;
+    
+}
+
+.btn-secondary:hover {
+    background-color: #8a1be2;
+    border-color: #8a1be2;
+}
+
+
+
+
+
+
+
+/* ---------------------------------- */
+/*  SOBRE NÓS (História) */
+/* ---------------------------------- */
+.about-section {
+    padding: 80px 0;
+    background-color: #121212; 
+    text-align: center; /* Centraliza tudo dentro desta seção */
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.story-content {
+    max-width: 900px; /* Mantém a largura máxima */
+    margin: 0 auto 40px auto; /* Centraliza o bloco de texto */
+    text-align: left; /*  bloco alinhado à esquerda */
+}
+
+.story-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: justify; /* Melhora a leitura do texto dentro do bloco */
+}
+
+.story-btn {
+    margin-top: 20px;
+    /* O botão já está centralizado por causa do text-align: center  */
+    display: inline-block;
+}
+
+/* ---------------------------------- */
+/*      CONHEÇA NOSSA EQUIPE */
+/* ---------------------------------- */
+.team-section {
+    padding: 80px 0;
+    background-color: #0d0d0d; /* Fundo mais escuro */
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+/* Os blocos da equipe  */
+.team-member {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove sublinhado de link */
+    color: inherit; /* Mantém a cor do texto do bloco */
+    display: block; 
+}
+
+.team-member:hover {
+    transform: translateY(-8px); /* Efeito de elevação  */
+    box-shadow: 0 10px 25px rgba(160, 32, 240, 0.4); /* Sombra roxa ao passar o mouse */
+    cursor: pointer;
+}
+
+.team-member h4 {
+    color: #a020f0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------- */
+/* SEÇÃO DE CHAMADA PARA AÇÃO (CTA) ( texto pronto para começar sua jornada?*/
+/* ---------------------------------- */
+.cta-section {
+    background: linear-gradient(135deg, #121212, #852bdf); /* Gradiente suave para o roxo */
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 15px 35px;
+    font-size: 18px;
+    border-width: 0;
+    
+    background-color: #770bbe; 
+}
+
+/* ---------------------------------- */
+/* RODAPÉ (FOOTER) */
+/* ---------------------------------- */
+.footer {
+    background-color: #141414; /* Fundo mais escuro para o footer */
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Três colunas  */
+    gap: 40px;
+    padding: 50px 0;
+    border-bottom: 1px solid #222;
+}
+
+
+
+.footer-info p {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.footer-links h5, .footer-contact h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 15px;
+    line-height: 2.5;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #a020f0;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.footer-contact p .icon {
+    color: #9a34da;
+    margin-right: 10px;
+    margin-top: 3px; /* Pequeno ajuste para alinhamento vertical */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+
+
+
+
+/* ---------------------------------- */
+/* ESTILIZAÇÃO RESPONSIVA */
+/* ---------------------------------- */
+
+/* Estilização para dispositivos menores */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+
+    .hero-section {
+        height: 60vh;
+        padding: 0 5%;
+        text-align: center;
+        justify-content: center;
+
+
+        background-size: 50% cover;
+    background-position: top 5% center;
+    }
+    
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+    
+    .hero-content p {
+        font-size: 20px;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .btn-secondary {
+    background-color: #000;
+    color: #a020f0; /* Roxo de contorno */
+    border: 2px solid #a020f0;  
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 coluna no footer */
+        text-align: center;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas no footer */
+    }
+}
+
+
+/* FIM DO ARQUIVO CSS */
